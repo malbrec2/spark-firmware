@@ -239,6 +239,11 @@ void Timing_Decrement(void)
 		{
 			LED_Signaling_Override();
 		}
+		else if( LED_RGB_OVERRIDE == RGB_USER_FADE )
+		{
+			LED_Fade(LED_RGB);
+			TimingLED = 20;
+		}
 	}
 	else if (TimingLED != 0x00)
 	{

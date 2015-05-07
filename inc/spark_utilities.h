@@ -92,6 +92,10 @@ public:
   static void reset(void);
 };
 
+#define RGB_USER_NONE  0;
+#define RGB_USER_SOLID 1;
+#define RGB_USER_FADE  2;
+
 class RGBClass {
 private:
 	static bool _control;
@@ -101,6 +105,7 @@ public:
 	static void color(int, int, int);
 	static void color(uint32_t rgb);
 	static void brightness(uint8_t, bool update=true);
+	static void fade(bool);
 };
 
 class SparkClass {

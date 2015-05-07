@@ -196,6 +196,17 @@ void RGBClass::brightness(uint8_t brightness, bool update)
 #endif
 }
 
+void RGBClass::fade(bool value)
+{
+#if !defined (RGB_NOTIFICATIONS_ON)	
+	if(_control)
+	{
+		if(value) LED_RGB_OVERRIDE = RGB_USER_FADE;
+		else LED_RGB_OVERRIDE = RGB_USER_SOLID;
+	}
+#endif
+}
+
 void SparkClass::variable(const char *varKey, void *userVar, Spark_Data_TypeDef userVarType)
 {
   if (NULL != userVar && NULL != varKey)
