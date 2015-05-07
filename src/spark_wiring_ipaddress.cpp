@@ -99,3 +99,10 @@ size_t IPAddress::printTo(Print& p) const
 	n += p.print(_address[3], DEC);
 	return n;
 }
+
+char* IPAddress::toString()
+{
+	static char result[15];
+	sprintf(result, "%d.%d.%d.%d", _address[0], _address[1], _address[2], _address[3]);
+	return result;
+}

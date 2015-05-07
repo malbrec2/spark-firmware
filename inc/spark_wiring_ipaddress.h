@@ -62,6 +62,7 @@ public:
 	IPAddress& operator=(uint32_t address);
 
 	virtual size_t printTo(Print& p) const;
+	char* toString();
 
 	friend class TCPClient;
 	friend class TCPServer;
