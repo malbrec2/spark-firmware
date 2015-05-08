@@ -92,9 +92,9 @@ public:
   static void reset(void);
 };
 
-#define RGB_USER_NONE  0;
-#define RGB_USER_SOLID 1;
-#define RGB_USER_FADE  2;
+#define RGB_USER_NONE  0
+#define RGB_USER_SOLID 1
+#define RGB_USER_FADE  2
 
 class RGBClass {
 private:

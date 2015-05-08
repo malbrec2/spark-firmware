@@ -201,8 +201,8 @@ void RGBClass::fade(bool value)
 #if !defined (RGB_NOTIFICATIONS_ON)	
 	if(_control)
 	{
-		if(value) LED_RGB_OVERRIDE = RGB_USER_FADE;
-		else LED_RGB_OVERRIDE = RGB_USER_SOLID;
+		if(value) { LED_RGB_OVERRIDE = RGB_USER_FADE; }
+		else { LED_RGB_OVERRIDE = RGB_USER_SOLID; }
 	}
 #endif
 }
