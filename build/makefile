@@ -50,7 +50,11 @@ USRSRC += ""
 
 # determine where user sources are, relative to project root
 ifdef APP
-USRSRC = applications/$(APP)/
+ifndef APPDIR
+USRSRC = ../$(APP)/
+else
+USRSRC = $(APPDIR)/
+endif
 CPPFLAGS += -std=gnu++11
 
 ifndef TARGET
